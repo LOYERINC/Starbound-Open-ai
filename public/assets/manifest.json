@@ -1,0 +1,3117 @@
+{
+  "activeTheme": "kenney",
+  "tileSize": 64,
+  "displayTileSize": 48,
+  "rendering": {
+    "pixelArt": false,
+    "filter": "linear"
+  },
+  "assets": {
+    "player": {
+      "id": "beige",
+      "name": "Beige",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/characters/beige-h96-smooth.png",
+      "thumbnail": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/characters/beige-smooth.png",
+      "previewSheet": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/characters/beige-preview-smooth.png",
+      "previewFrameSize": {
+        "width": 64,
+        "height": 64
+      },
+      "previewAnimations": {
+        "idle": {
+          "start": 0,
+          "end": 0
+        },
+        "run": {
+          "start": 1,
+          "end": 2
+        }
+      },
+      "frameSize": {
+        "width": 96,
+        "height": 96
+      },
+      "frameCount": 8,
+      "animations": {
+        "idle": {
+          "start": 0,
+          "end": 0,
+          "frameRate": 5,
+          "repeat": -1
+        },
+        "run": {
+          "start": 1,
+          "end": 2,
+          "frameRate": 8,
+          "repeat": -1
+        },
+        "jump": {
+          "start": 3,
+          "end": 3,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "fall": {
+          "start": 4,
+          "end": 4,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "hurt": {
+          "start": 5,
+          "end": 5,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "die": {
+          "start": 6,
+          "end": 6,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "attack": {
+          "start": 7,
+          "end": 7,
+          "frameRate": 5,
+          "repeat": 0
+        }
+      },
+      "tightBounds": {
+        "x": 16,
+        "y": 21,
+        "width": 65,
+        "height": 75
+      },
+      "feet": {
+        "x": 48.5,
+        "y": 96
+      },
+      "sourceFiles": [
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_beige_climb_a.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_beige_climb_b.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_beige_duck.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_beige_front.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_beige_hit.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_beige_idle.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_beige_jump.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_beige_walk_a.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_beige_walk_b.png"
+      ],
+      "tileSize": 64,
+      "displayTileSize": 48,
+      "pixelArt": false,
+      "color": "beige",
+      "displayHitbox": {
+        "width": 39,
+        "height": 42
+      },
+      "hitbox": {
+        "width": 65,
+        "height": 75,
+        "offsetX": 15.5,
+        "offsetY": 21
+      },
+      "key": "selected-player",
+      "type": "spritesheet"
+    },
+    "backgroundFar": {
+      "key": "selected-background-far",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/vector-hires/Vector/Backgrounds/background_clouds.svg",
+      "type": "image",
+      "frameSize": {
+        "width": 2048,
+        "height": 2048
+      },
+      "frameCount": 1,
+      "animations": {},
+      "parallaxSpeed": 0.16
+    },
+    "tileset": {
+      "id": "grass",
+      "name": "Grass",
+      "key": "tileset-grass",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/tilesets/grass-64-48-smooth.png",
+      "thumbnail": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/tilesets/grass-smooth.png",
+      "frameSize": {
+        "width": 48,
+        "height": 48
+      },
+      "frameCount": 4,
+      "tileSize": 64,
+      "displayTileSize": 48,
+      "pixelArt": false,
+      "frameMap": {
+        "ground": 0,
+        "groundTop": 1,
+        "platform": 2,
+        "spikes": 3
+      },
+      "collisionOffsets": {
+        "ground": 0,
+        "groundTop": 0,
+        "platform": 0,
+        "spikes": 22
+      },
+      "sourceFiles": [
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Tiles/Default/terrain_grass_block_center.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Tiles/Default/terrain_grass_block_top.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Tiles/Default/terrain_grass_cloud_middle.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Tiles/Default/spikes.png"
+      ],
+      "type": "spritesheet",
+      "animations": {}
+    },
+    "sfxJump": {
+      "key": "audio-jump",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/Sounds/sfx_jump.ogg",
+      "type": "audio",
+      "loop": false
+    },
+    "sfxHurt": {
+      "key": "audio-hurt",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/Sounds/sfx_hurt.ogg",
+      "type": "audio",
+      "loop": false
+    }
+  },
+  "heroes": [
+    {
+      "id": "beige",
+      "name": "Beige",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/characters/beige-h96-smooth.png",
+      "thumbnail": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/characters/beige-smooth.png",
+      "previewSheet": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/characters/beige-preview-smooth.png",
+      "previewFrameSize": {
+        "width": 64,
+        "height": 64
+      },
+      "previewAnimations": {
+        "idle": {
+          "start": 0,
+          "end": 0
+        },
+        "run": {
+          "start": 1,
+          "end": 2
+        }
+      },
+      "frameSize": {
+        "width": 96,
+        "height": 96
+      },
+      "frameCount": 8,
+      "animations": {
+        "idle": {
+          "start": 0,
+          "end": 0,
+          "frameRate": 5,
+          "repeat": -1
+        },
+        "run": {
+          "start": 1,
+          "end": 2,
+          "frameRate": 8,
+          "repeat": -1
+        },
+        "jump": {
+          "start": 3,
+          "end": 3,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "fall": {
+          "start": 4,
+          "end": 4,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "hurt": {
+          "start": 5,
+          "end": 5,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "die": {
+          "start": 6,
+          "end": 6,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "attack": {
+          "start": 7,
+          "end": 7,
+          "frameRate": 5,
+          "repeat": 0
+        }
+      },
+      "tightBounds": {
+        "x": 16,
+        "y": 21,
+        "width": 65,
+        "height": 75
+      },
+      "feet": {
+        "x": 48.5,
+        "y": 96
+      },
+      "sourceFiles": [
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_beige_climb_a.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_beige_climb_b.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_beige_duck.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_beige_front.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_beige_hit.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_beige_idle.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_beige_jump.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_beige_walk_a.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_beige_walk_b.png"
+      ],
+      "tileSize": 64,
+      "displayTileSize": 48,
+      "pixelArt": false,
+      "color": "beige",
+      "displayHitbox": {
+        "width": 39,
+        "height": 42
+      },
+      "hitbox": {
+        "width": 65,
+        "height": 75,
+        "offsetX": 15.5,
+        "offsetY": 21
+      }
+    },
+    {
+      "id": "green",
+      "name": "Green",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/characters/green-h96-smooth.png",
+      "thumbnail": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/characters/green-smooth.png",
+      "previewSheet": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/characters/green-preview-smooth.png",
+      "previewFrameSize": {
+        "width": 64,
+        "height": 64
+      },
+      "previewAnimations": {
+        "idle": {
+          "start": 0,
+          "end": 0
+        },
+        "run": {
+          "start": 1,
+          "end": 2
+        }
+      },
+      "frameSize": {
+        "width": 96,
+        "height": 96
+      },
+      "frameCount": 8,
+      "animations": {
+        "idle": {
+          "start": 0,
+          "end": 0,
+          "frameRate": 5,
+          "repeat": -1
+        },
+        "run": {
+          "start": 1,
+          "end": 2,
+          "frameRate": 8,
+          "repeat": -1
+        },
+        "jump": {
+          "start": 3,
+          "end": 3,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "fall": {
+          "start": 4,
+          "end": 4,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "hurt": {
+          "start": 5,
+          "end": 5,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "die": {
+          "start": 6,
+          "end": 6,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "attack": {
+          "start": 7,
+          "end": 7,
+          "frameRate": 5,
+          "repeat": 0
+        }
+      },
+      "tightBounds": {
+        "x": 16,
+        "y": 21,
+        "width": 65,
+        "height": 75
+      },
+      "feet": {
+        "x": 48.5,
+        "y": 96
+      },
+      "sourceFiles": [
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_green_climb_a.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_green_climb_b.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_green_duck.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_green_front.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_green_hit.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_green_idle.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_green_jump.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_green_walk_a.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_green_walk_b.png"
+      ],
+      "tileSize": 64,
+      "displayTileSize": 48,
+      "pixelArt": false,
+      "color": "green",
+      "displayHitbox": {
+        "width": 39,
+        "height": 42
+      },
+      "hitbox": {
+        "width": 65,
+        "height": 75,
+        "offsetX": 15.5,
+        "offsetY": 21
+      }
+    },
+    {
+      "id": "pink",
+      "name": "Pink",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/characters/pink-h96-smooth.png",
+      "thumbnail": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/characters/pink-smooth.png",
+      "previewSheet": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/characters/pink-preview-smooth.png",
+      "previewFrameSize": {
+        "width": 64,
+        "height": 64
+      },
+      "previewAnimations": {
+        "idle": {
+          "start": 0,
+          "end": 0
+        },
+        "run": {
+          "start": 1,
+          "end": 2
+        }
+      },
+      "frameSize": {
+        "width": 96,
+        "height": 96
+      },
+      "frameCount": 8,
+      "animations": {
+        "idle": {
+          "start": 0,
+          "end": 0,
+          "frameRate": 5,
+          "repeat": -1
+        },
+        "run": {
+          "start": 1,
+          "end": 2,
+          "frameRate": 8,
+          "repeat": -1
+        },
+        "jump": {
+          "start": 3,
+          "end": 3,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "fall": {
+          "start": 4,
+          "end": 4,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "hurt": {
+          "start": 5,
+          "end": 5,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "die": {
+          "start": 6,
+          "end": 6,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "attack": {
+          "start": 7,
+          "end": 7,
+          "frameRate": 5,
+          "repeat": 0
+        }
+      },
+      "tightBounds": {
+        "x": 16,
+        "y": 21,
+        "width": 65,
+        "height": 75
+      },
+      "feet": {
+        "x": 48.5,
+        "y": 96
+      },
+      "sourceFiles": [
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_pink_climb_a.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_pink_climb_b.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_pink_duck.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_pink_front.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_pink_hit.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_pink_idle.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_pink_jump.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_pink_walk_a.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_pink_walk_b.png"
+      ],
+      "tileSize": 64,
+      "displayTileSize": 48,
+      "pixelArt": false,
+      "color": "pink",
+      "displayHitbox": {
+        "width": 39,
+        "height": 42
+      },
+      "hitbox": {
+        "width": 65,
+        "height": 75,
+        "offsetX": 15.5,
+        "offsetY": 21
+      }
+    },
+    {
+      "id": "purple",
+      "name": "Purple",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/characters/purple-h96-smooth.png",
+      "thumbnail": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/characters/purple-smooth.png",
+      "previewSheet": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/characters/purple-preview-smooth.png",
+      "previewFrameSize": {
+        "width": 64,
+        "height": 64
+      },
+      "previewAnimations": {
+        "idle": {
+          "start": 0,
+          "end": 0
+        },
+        "run": {
+          "start": 1,
+          "end": 2
+        }
+      },
+      "frameSize": {
+        "width": 96,
+        "height": 96
+      },
+      "frameCount": 8,
+      "animations": {
+        "idle": {
+          "start": 0,
+          "end": 0,
+          "frameRate": 5,
+          "repeat": -1
+        },
+        "run": {
+          "start": 1,
+          "end": 2,
+          "frameRate": 8,
+          "repeat": -1
+        },
+        "jump": {
+          "start": 3,
+          "end": 3,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "fall": {
+          "start": 4,
+          "end": 4,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "hurt": {
+          "start": 5,
+          "end": 5,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "die": {
+          "start": 6,
+          "end": 6,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "attack": {
+          "start": 7,
+          "end": 7,
+          "frameRate": 5,
+          "repeat": 0
+        }
+      },
+      "tightBounds": {
+        "x": 16,
+        "y": 21,
+        "width": 65,
+        "height": 75
+      },
+      "feet": {
+        "x": 48.5,
+        "y": 96
+      },
+      "sourceFiles": [
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_purple_climb_a.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_purple_climb_b.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_purple_duck.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_purple_front.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_purple_hit.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_purple_idle.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_purple_jump.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_purple_walk_a.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_purple_walk_b.png"
+      ],
+      "tileSize": 64,
+      "displayTileSize": 48,
+      "pixelArt": false,
+      "color": "purple",
+      "displayHitbox": {
+        "width": 39,
+        "height": 42
+      },
+      "hitbox": {
+        "width": 65,
+        "height": 75,
+        "offsetX": 15.5,
+        "offsetY": 21
+      }
+    },
+    {
+      "id": "yellow",
+      "name": "Yellow",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/characters/yellow-h96-smooth.png",
+      "thumbnail": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/characters/yellow-smooth.png",
+      "previewSheet": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/characters/yellow-preview-smooth.png",
+      "previewFrameSize": {
+        "width": 64,
+        "height": 64
+      },
+      "previewAnimations": {
+        "idle": {
+          "start": 0,
+          "end": 0
+        },
+        "run": {
+          "start": 1,
+          "end": 2
+        }
+      },
+      "frameSize": {
+        "width": 96,
+        "height": 96
+      },
+      "frameCount": 8,
+      "animations": {
+        "idle": {
+          "start": 0,
+          "end": 0,
+          "frameRate": 5,
+          "repeat": -1
+        },
+        "run": {
+          "start": 1,
+          "end": 2,
+          "frameRate": 8,
+          "repeat": -1
+        },
+        "jump": {
+          "start": 3,
+          "end": 3,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "fall": {
+          "start": 4,
+          "end": 4,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "hurt": {
+          "start": 5,
+          "end": 5,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "die": {
+          "start": 6,
+          "end": 6,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "attack": {
+          "start": 7,
+          "end": 7,
+          "frameRate": 5,
+          "repeat": 0
+        }
+      },
+      "tightBounds": {
+        "x": 16,
+        "y": 21,
+        "width": 65,
+        "height": 75
+      },
+      "feet": {
+        "x": 48.5,
+        "y": 96
+      },
+      "sourceFiles": [
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_yellow_climb_a.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_yellow_climb_b.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_yellow_duck.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_yellow_front.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_yellow_hit.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_yellow_idle.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_yellow_jump.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_yellow_walk_a.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Characters/Default/character_yellow_walk_b.png"
+      ],
+      "tileSize": 64,
+      "displayTileSize": 48,
+      "pixelArt": false,
+      "color": "yellow",
+      "displayHitbox": {
+        "width": 39,
+        "height": 42
+      },
+      "hitbox": {
+        "width": 65,
+        "height": 75,
+        "offsetX": 15.5,
+        "offsetY": 21
+      }
+    }
+  ],
+  "backgrounds": [
+    {
+      "id": "background_clouds",
+      "name": "Clouds",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/vector-hires/Vector/Backgrounds/background_clouds.svg",
+      "thumbnail": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/vector-hires/Vector/Backgrounds/background_clouds.svg",
+      "layers": [
+        {
+          "key": "far",
+          "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/vector-hires/Vector/Backgrounds/background_clouds.svg",
+          "speed": 0.16,
+          "frameSize": {
+            "width": 2048,
+            "height": 2048
+          }
+        }
+      ],
+      "tileableX": true,
+      "frameSize": {
+        "width": 2048,
+        "height": 2048
+      },
+      "tileSize": 64,
+      "displayTileSize": 48,
+      "pixelArt": false
+    },
+    {
+      "id": "background_color_desert",
+      "name": "Color Desert",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/vector-hires/Vector/Backgrounds/background_color_desert.svg",
+      "thumbnail": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/vector-hires/Vector/Backgrounds/background_color_desert.svg",
+      "layers": [
+        {
+          "key": "far",
+          "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/vector-hires/Vector/Backgrounds/background_color_desert.svg",
+          "speed": 0.16,
+          "frameSize": {
+            "width": 2048,
+            "height": 2048
+          }
+        }
+      ],
+      "tileableX": true,
+      "frameSize": {
+        "width": 2048,
+        "height": 2048
+      },
+      "tileSize": 64,
+      "displayTileSize": 48,
+      "pixelArt": false
+    },
+    {
+      "id": "background_color_hills",
+      "name": "Color Hills",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/vector-hires/Vector/Backgrounds/background_color_hills.svg",
+      "thumbnail": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/vector-hires/Vector/Backgrounds/background_color_hills.svg",
+      "layers": [
+        {
+          "key": "far",
+          "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/vector-hires/Vector/Backgrounds/background_color_hills.svg",
+          "speed": 0.16,
+          "frameSize": {
+            "width": 2048,
+            "height": 2048
+          }
+        }
+      ],
+      "tileableX": true,
+      "frameSize": {
+        "width": 2048,
+        "height": 2048
+      },
+      "tileSize": 64,
+      "displayTileSize": 48,
+      "pixelArt": false
+    },
+    {
+      "id": "background_color_mushrooms",
+      "name": "Color Mushrooms",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/vector-hires/Vector/Backgrounds/background_color_mushrooms.svg",
+      "thumbnail": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/vector-hires/Vector/Backgrounds/background_color_mushrooms.svg",
+      "layers": [
+        {
+          "key": "far",
+          "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/vector-hires/Vector/Backgrounds/background_color_mushrooms.svg",
+          "speed": 0.16,
+          "frameSize": {
+            "width": 2048,
+            "height": 2048
+          }
+        }
+      ],
+      "tileableX": true,
+      "frameSize": {
+        "width": 2048,
+        "height": 2048
+      },
+      "tileSize": 64,
+      "displayTileSize": 48,
+      "pixelArt": false
+    },
+    {
+      "id": "background_color_trees",
+      "name": "Color Trees",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/vector-hires/Vector/Backgrounds/background_color_trees.svg",
+      "thumbnail": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/vector-hires/Vector/Backgrounds/background_color_trees.svg",
+      "layers": [
+        {
+          "key": "far",
+          "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/vector-hires/Vector/Backgrounds/background_color_trees.svg",
+          "speed": 0.16,
+          "frameSize": {
+            "width": 2048,
+            "height": 2048
+          }
+        }
+      ],
+      "tileableX": true,
+      "frameSize": {
+        "width": 2048,
+        "height": 2048
+      },
+      "tileSize": 64,
+      "displayTileSize": 48,
+      "pixelArt": false
+    },
+    {
+      "id": "background_fade_desert",
+      "name": "Fade Desert",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/vector-hires/Vector/Backgrounds/background_fade_desert.svg",
+      "thumbnail": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/vector-hires/Vector/Backgrounds/background_fade_desert.svg",
+      "layers": [
+        {
+          "key": "far",
+          "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/vector-hires/Vector/Backgrounds/background_fade_desert.svg",
+          "speed": 0.16,
+          "frameSize": {
+            "width": 2048,
+            "height": 2048
+          }
+        }
+      ],
+      "tileableX": true,
+      "frameSize": {
+        "width": 2048,
+        "height": 2048
+      },
+      "tileSize": 64,
+      "displayTileSize": 48,
+      "pixelArt": false
+    },
+    {
+      "id": "background_fade_hills",
+      "name": "Fade Hills",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/vector-hires/Vector/Backgrounds/background_fade_hills.svg",
+      "thumbnail": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/vector-hires/Vector/Backgrounds/background_fade_hills.svg",
+      "layers": [
+        {
+          "key": "far",
+          "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/vector-hires/Vector/Backgrounds/background_fade_hills.svg",
+          "speed": 0.16,
+          "frameSize": {
+            "width": 2048,
+            "height": 2048
+          }
+        }
+      ],
+      "tileableX": true,
+      "frameSize": {
+        "width": 2048,
+        "height": 2048
+      },
+      "tileSize": 64,
+      "displayTileSize": 48,
+      "pixelArt": false
+    },
+    {
+      "id": "background_fade_mushrooms",
+      "name": "Fade Mushrooms",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/vector-hires/Vector/Backgrounds/background_fade_mushrooms.svg",
+      "thumbnail": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/vector-hires/Vector/Backgrounds/background_fade_mushrooms.svg",
+      "layers": [
+        {
+          "key": "far",
+          "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/vector-hires/Vector/Backgrounds/background_fade_mushrooms.svg",
+          "speed": 0.16,
+          "frameSize": {
+            "width": 2048,
+            "height": 2048
+          }
+        }
+      ],
+      "tileableX": true,
+      "frameSize": {
+        "width": 2048,
+        "height": 2048
+      },
+      "tileSize": 64,
+      "displayTileSize": 48,
+      "pixelArt": false
+    },
+    {
+      "id": "background_fade_trees",
+      "name": "Fade Trees",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/vector-hires/Vector/Backgrounds/background_fade_trees.svg",
+      "thumbnail": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/vector-hires/Vector/Backgrounds/background_fade_trees.svg",
+      "layers": [
+        {
+          "key": "far",
+          "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/vector-hires/Vector/Backgrounds/background_fade_trees.svg",
+          "speed": 0.16,
+          "frameSize": {
+            "width": 2048,
+            "height": 2048
+          }
+        }
+      ],
+      "tileableX": true,
+      "frameSize": {
+        "width": 2048,
+        "height": 2048
+      },
+      "tileSize": 64,
+      "displayTileSize": 48,
+      "pixelArt": false
+    },
+    {
+      "id": "background_solid_cloud",
+      "name": "Solid Cloud",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/vector-hires/Vector/Backgrounds/background_solid_cloud.svg",
+      "thumbnail": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/vector-hires/Vector/Backgrounds/background_solid_cloud.svg",
+      "layers": [
+        {
+          "key": "far",
+          "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/vector-hires/Vector/Backgrounds/background_solid_cloud.svg",
+          "speed": 0.16,
+          "frameSize": {
+            "width": 2048,
+            "height": 2048
+          }
+        }
+      ],
+      "tileableX": true,
+      "frameSize": {
+        "width": 2048,
+        "height": 2048
+      },
+      "tileSize": 64,
+      "displayTileSize": 48,
+      "pixelArt": false
+    },
+    {
+      "id": "background_solid_dirt",
+      "name": "Solid Dirt",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/vector-hires/Vector/Backgrounds/background_solid_dirt.svg",
+      "thumbnail": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/vector-hires/Vector/Backgrounds/background_solid_dirt.svg",
+      "layers": [
+        {
+          "key": "far",
+          "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/vector-hires/Vector/Backgrounds/background_solid_dirt.svg",
+          "speed": 0.16,
+          "frameSize": {
+            "width": 2048,
+            "height": 2048
+          }
+        }
+      ],
+      "tileableX": true,
+      "frameSize": {
+        "width": 2048,
+        "height": 2048
+      },
+      "tileSize": 64,
+      "displayTileSize": 48,
+      "pixelArt": false
+    },
+    {
+      "id": "background_solid_grass",
+      "name": "Solid Grass",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/vector-hires/Vector/Backgrounds/background_solid_grass.svg",
+      "thumbnail": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/vector-hires/Vector/Backgrounds/background_solid_grass.svg",
+      "layers": [
+        {
+          "key": "far",
+          "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/vector-hires/Vector/Backgrounds/background_solid_grass.svg",
+          "speed": 0.16,
+          "frameSize": {
+            "width": 2048,
+            "height": 2048
+          }
+        }
+      ],
+      "tileableX": true,
+      "frameSize": {
+        "width": 2048,
+        "height": 2048
+      },
+      "tileSize": 64,
+      "displayTileSize": 48,
+      "pixelArt": false
+    },
+    {
+      "id": "background_solid_sand",
+      "name": "Solid Sand",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/vector-hires/Vector/Backgrounds/background_solid_sand.svg",
+      "thumbnail": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/vector-hires/Vector/Backgrounds/background_solid_sand.svg",
+      "layers": [
+        {
+          "key": "far",
+          "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/vector-hires/Vector/Backgrounds/background_solid_sand.svg",
+          "speed": 0.16,
+          "frameSize": {
+            "width": 2048,
+            "height": 2048
+          }
+        }
+      ],
+      "tileableX": true,
+      "frameSize": {
+        "width": 2048,
+        "height": 2048
+      },
+      "tileSize": 64,
+      "displayTileSize": 48,
+      "pixelArt": false
+    },
+    {
+      "id": "background_solid_sky",
+      "name": "Solid Sky",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/vector-hires/Vector/Backgrounds/background_solid_sky.svg",
+      "thumbnail": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/vector-hires/Vector/Backgrounds/background_solid_sky.svg",
+      "layers": [
+        {
+          "key": "far",
+          "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/vector-hires/Vector/Backgrounds/background_solid_sky.svg",
+          "speed": 0.16,
+          "frameSize": {
+            "width": 2048,
+            "height": 2048
+          }
+        }
+      ],
+      "tileableX": true,
+      "frameSize": {
+        "width": 2048,
+        "height": 2048
+      },
+      "tileSize": 64,
+      "displayTileSize": 48,
+      "pixelArt": false
+    }
+  ],
+  "tilesets": [
+    {
+      "id": "grass",
+      "name": "Grass",
+      "key": "tileset-grass",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/tilesets/grass-64-48-smooth.png",
+      "thumbnail": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/tilesets/grass-smooth.png",
+      "frameSize": {
+        "width": 48,
+        "height": 48
+      },
+      "frameCount": 4,
+      "tileSize": 64,
+      "displayTileSize": 48,
+      "pixelArt": false,
+      "frameMap": {
+        "ground": 0,
+        "groundTop": 1,
+        "platform": 2,
+        "spikes": 3
+      },
+      "collisionOffsets": {
+        "ground": 0,
+        "groundTop": 0,
+        "platform": 0,
+        "spikes": 22
+      },
+      "sourceFiles": [
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Tiles/Default/terrain_grass_block_center.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Tiles/Default/terrain_grass_block_top.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Tiles/Default/terrain_grass_cloud_middle.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Tiles/Default/spikes.png"
+      ]
+    },
+    {
+      "id": "dirt",
+      "name": "Dirt",
+      "key": "tileset-dirt",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/tilesets/dirt-64-48-smooth.png",
+      "thumbnail": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/tilesets/dirt-smooth.png",
+      "frameSize": {
+        "width": 48,
+        "height": 48
+      },
+      "frameCount": 4,
+      "tileSize": 64,
+      "displayTileSize": 48,
+      "pixelArt": false,
+      "frameMap": {
+        "ground": 0,
+        "groundTop": 1,
+        "platform": 2,
+        "spikes": 3
+      },
+      "collisionOffsets": {
+        "ground": 0,
+        "groundTop": 0,
+        "platform": 0,
+        "spikes": 22
+      },
+      "sourceFiles": [
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Tiles/Default/terrain_dirt_block_center.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Tiles/Default/terrain_dirt_block_top.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Tiles/Default/terrain_dirt_cloud_middle.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Tiles/Default/spikes.png"
+      ]
+    },
+    {
+      "id": "purple",
+      "name": "Purple",
+      "key": "tileset-purple",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/tilesets/purple-64-48-smooth.png",
+      "thumbnail": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/tilesets/purple-smooth.png",
+      "frameSize": {
+        "width": 48,
+        "height": 48
+      },
+      "frameCount": 4,
+      "tileSize": 64,
+      "displayTileSize": 48,
+      "pixelArt": false,
+      "frameMap": {
+        "ground": 0,
+        "groundTop": 1,
+        "platform": 2,
+        "spikes": 3
+      },
+      "collisionOffsets": {
+        "ground": 0,
+        "groundTop": 0,
+        "platform": 0,
+        "spikes": 22
+      },
+      "sourceFiles": [
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Tiles/Default/terrain_purple_block_center.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Tiles/Default/terrain_purple_block_top.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Tiles/Default/terrain_purple_cloud_middle.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Tiles/Default/spikes.png"
+      ]
+    },
+    {
+      "id": "sand",
+      "name": "Sand",
+      "key": "tileset-sand",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/tilesets/sand-64-48-smooth.png",
+      "thumbnail": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/tilesets/sand-smooth.png",
+      "frameSize": {
+        "width": 48,
+        "height": 48
+      },
+      "frameCount": 4,
+      "tileSize": 64,
+      "displayTileSize": 48,
+      "pixelArt": false,
+      "frameMap": {
+        "ground": 0,
+        "groundTop": 1,
+        "platform": 2,
+        "spikes": 3
+      },
+      "collisionOffsets": {
+        "ground": 0,
+        "groundTop": 0,
+        "platform": 0,
+        "spikes": 22
+      },
+      "sourceFiles": [
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Tiles/Default/terrain_sand_block_center.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Tiles/Default/terrain_sand_block_top.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Tiles/Default/terrain_sand_cloud_middle.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Tiles/Default/spikes.png"
+      ]
+    },
+    {
+      "id": "snow",
+      "name": "Snow",
+      "key": "tileset-snow",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/tilesets/snow-64-48-smooth.png",
+      "thumbnail": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/tilesets/snow-smooth.png",
+      "frameSize": {
+        "width": 48,
+        "height": 48
+      },
+      "frameCount": 4,
+      "tileSize": 64,
+      "displayTileSize": 48,
+      "pixelArt": false,
+      "frameMap": {
+        "ground": 0,
+        "groundTop": 1,
+        "platform": 2,
+        "spikes": 3
+      },
+      "collisionOffsets": {
+        "ground": 0,
+        "groundTop": 0,
+        "platform": 0,
+        "spikes": 22
+      },
+      "sourceFiles": [
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Tiles/Default/terrain_snow_block_center.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Tiles/Default/terrain_snow_block_top.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Tiles/Default/terrain_snow_cloud_middle.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Tiles/Default/spikes.png"
+      ]
+    },
+    {
+      "id": "stone",
+      "name": "Stone",
+      "key": "tileset-stone",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/tilesets/stone-64-48-smooth.png",
+      "thumbnail": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/tilesets/stone-smooth.png",
+      "frameSize": {
+        "width": 48,
+        "height": 48
+      },
+      "frameCount": 4,
+      "tileSize": 64,
+      "displayTileSize": 48,
+      "pixelArt": false,
+      "frameMap": {
+        "ground": 0,
+        "groundTop": 1,
+        "platform": 2,
+        "spikes": 3
+      },
+      "collisionOffsets": {
+        "ground": 0,
+        "groundTop": 0,
+        "platform": 0,
+        "spikes": 22
+      },
+      "sourceFiles": [
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Tiles/Default/terrain_stone_block_center.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Tiles/Default/terrain_stone_block_top.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Tiles/Default/terrain_stone_cloud_middle.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Tiles/Default/spikes.png"
+      ]
+    }
+  ],
+  "enemies": [
+    {
+      "id": "barnacle",
+      "name": "Barnacle",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/enemies/barnacle-h64-smooth.png",
+      "thumbnail": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/enemies/barnacle-smooth.png",
+      "previewSheet": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/enemies/barnacle-preview-smooth.png",
+      "previewFrameSize": {
+        "width": 64,
+        "height": 64
+      },
+      "previewAnimations": {
+        "idle": {
+          "start": 0,
+          "end": 0
+        },
+        "run": {
+          "start": 1,
+          "end": 1
+        }
+      },
+      "frameSize": {
+        "width": 64,
+        "height": 64
+      },
+      "frameCount": 9,
+      "animations": {
+        "idle": {
+          "start": 0,
+          "end": 0,
+          "frameRate": 5,
+          "repeat": -1
+        },
+        "run": {
+          "start": 1,
+          "end": 1,
+          "frameRate": 8,
+          "repeat": -1
+        },
+        "jump": {
+          "start": 2,
+          "end": 2,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "fall": {
+          "start": 3,
+          "end": 3,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "hurt": {
+          "start": 4,
+          "end": 4,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "die": {
+          "start": 5,
+          "end": 5,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "attack": {
+          "start": 6,
+          "end": 8,
+          "frameRate": 5,
+          "repeat": 0
+        }
+      },
+      "tightBounds": {
+        "x": 4,
+        "y": 8,
+        "width": 56,
+        "height": 56
+      },
+      "feet": {
+        "x": 32.0,
+        "y": 64
+      },
+      "sourceFiles": [
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/barnacle_attack_a.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/barnacle_attack_b.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/barnacle_attack_rest.png"
+      ],
+      "tileSize": 64,
+      "displayTileSize": 48,
+      "pixelArt": false,
+      "behavior": "stationary",
+      "hitbox": {
+        "width": 56,
+        "height": 56,
+        "offsetX": 4,
+        "offsetY": 8
+      },
+      "displayHeight": 39
+    },
+    {
+      "id": "bee",
+      "name": "Bee",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/enemies/bee-h64-smooth.png",
+      "thumbnail": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/enemies/bee-smooth.png",
+      "previewSheet": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/enemies/bee-preview-smooth.png",
+      "previewFrameSize": {
+        "width": 64,
+        "height": 64
+      },
+      "previewAnimations": {
+        "idle": {
+          "start": 0,
+          "end": 0
+        },
+        "run": {
+          "start": 1,
+          "end": 2
+        }
+      },
+      "frameSize": {
+        "width": 64,
+        "height": 64
+      },
+      "frameCount": 8,
+      "animations": {
+        "idle": {
+          "start": 0,
+          "end": 0,
+          "frameRate": 5,
+          "repeat": -1
+        },
+        "run": {
+          "start": 1,
+          "end": 2,
+          "frameRate": 8,
+          "repeat": -1
+        },
+        "jump": {
+          "start": 3,
+          "end": 3,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "fall": {
+          "start": 4,
+          "end": 4,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "hurt": {
+          "start": 5,
+          "end": 5,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "die": {
+          "start": 6,
+          "end": 6,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "attack": {
+          "start": 7,
+          "end": 7,
+          "frameRate": 5,
+          "repeat": 0
+        }
+      },
+      "tightBounds": {
+        "x": 2,
+        "y": 6,
+        "width": 60,
+        "height": 51
+      },
+      "feet": {
+        "x": 32.0,
+        "y": 57
+      },
+      "sourceFiles": [
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/bee_a.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/bee_b.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/bee_rest.png"
+      ],
+      "tileSize": 64,
+      "displayTileSize": 48,
+      "pixelArt": false,
+      "behavior": "flying",
+      "hitbox": {
+        "width": 60,
+        "height": 51,
+        "offsetX": 2,
+        "offsetY": 6
+      },
+      "displayHeight": 39
+    },
+    {
+      "id": "block",
+      "name": "Block",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/enemies/block-h64-smooth.png",
+      "thumbnail": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/enemies/block-smooth.png",
+      "previewSheet": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/enemies/block-preview-smooth.png",
+      "previewFrameSize": {
+        "width": 64,
+        "height": 64
+      },
+      "previewAnimations": {
+        "idle": {
+          "start": 0,
+          "end": 0
+        },
+        "run": {
+          "start": 1,
+          "end": 2
+        }
+      },
+      "frameSize": {
+        "width": 64,
+        "height": 64
+      },
+      "frameCount": 13,
+      "animations": {
+        "idle": {
+          "start": 0,
+          "end": 1,
+          "frameRate": 5,
+          "repeat": -1
+        },
+        "run": {
+          "start": 2,
+          "end": 3,
+          "frameRate": 8,
+          "repeat": -1
+        },
+        "jump": {
+          "start": 4,
+          "end": 5,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "fall": {
+          "start": 6,
+          "end": 6,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "hurt": {
+          "start": 7,
+          "end": 8,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "die": {
+          "start": 9,
+          "end": 10,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "attack": {
+          "start": 11,
+          "end": 12,
+          "frameRate": 5,
+          "repeat": 0
+        }
+      },
+      "tightBounds": {
+        "x": 0,
+        "y": 0,
+        "width": 64,
+        "height": 64
+      },
+      "feet": {
+        "x": 32.0,
+        "y": 64
+      },
+      "sourceFiles": [
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/block_fall.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/block_idle.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/block_rest.png"
+      ],
+      "tileSize": 64,
+      "displayTileSize": 48,
+      "pixelArt": false,
+      "behavior": "patrol",
+      "hitbox": {
+        "width": 64,
+        "height": 64,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "displayHeight": 39
+    },
+    {
+      "id": "fish_blue",
+      "name": "Fish Blue",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/enemies/fish_blue-h64-smooth.png",
+      "thumbnail": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/enemies/fish_blue-smooth.png",
+      "previewSheet": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/enemies/fish_blue-preview-smooth.png",
+      "previewFrameSize": {
+        "width": 64,
+        "height": 64
+      },
+      "previewAnimations": {
+        "idle": {
+          "start": 0,
+          "end": 0
+        },
+        "run": {
+          "start": 1,
+          "end": 2
+        }
+      },
+      "frameSize": {
+        "width": 64,
+        "height": 64
+      },
+      "frameCount": 8,
+      "animations": {
+        "idle": {
+          "start": 0,
+          "end": 0,
+          "frameRate": 5,
+          "repeat": -1
+        },
+        "run": {
+          "start": 1,
+          "end": 2,
+          "frameRate": 8,
+          "repeat": -1
+        },
+        "jump": {
+          "start": 3,
+          "end": 3,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "fall": {
+          "start": 4,
+          "end": 4,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "hurt": {
+          "start": 5,
+          "end": 5,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "die": {
+          "start": 6,
+          "end": 6,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "attack": {
+          "start": 7,
+          "end": 7,
+          "frameRate": 5,
+          "repeat": 0
+        }
+      },
+      "tightBounds": {
+        "x": 1,
+        "y": 7,
+        "width": 62,
+        "height": 52
+      },
+      "feet": {
+        "x": 32.0,
+        "y": 59
+      },
+      "sourceFiles": [
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/fish_blue_rest.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/fish_blue_swim_a.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/fish_blue_swim_b.png"
+      ],
+      "tileSize": 64,
+      "displayTileSize": 48,
+      "pixelArt": false,
+      "behavior": "patrol",
+      "hitbox": {
+        "width": 62,
+        "height": 52,
+        "offsetX": 1,
+        "offsetY": 7
+      },
+      "displayHeight": 39
+    },
+    {
+      "id": "fish_purple",
+      "name": "Fish Purple",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/enemies/fish_purple-h64-smooth.png",
+      "thumbnail": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/enemies/fish_purple-smooth.png",
+      "previewSheet": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/enemies/fish_purple-preview-smooth.png",
+      "previewFrameSize": {
+        "width": 64,
+        "height": 64
+      },
+      "previewAnimations": {
+        "idle": {
+          "start": 0,
+          "end": 0
+        },
+        "run": {
+          "start": 1,
+          "end": 1
+        }
+      },
+      "frameSize": {
+        "width": 64,
+        "height": 64
+      },
+      "frameCount": 7,
+      "animations": {
+        "idle": {
+          "start": 0,
+          "end": 0,
+          "frameRate": 5,
+          "repeat": -1
+        },
+        "run": {
+          "start": 1,
+          "end": 1,
+          "frameRate": 8,
+          "repeat": -1
+        },
+        "jump": {
+          "start": 2,
+          "end": 2,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "fall": {
+          "start": 3,
+          "end": 3,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "hurt": {
+          "start": 4,
+          "end": 4,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "die": {
+          "start": 5,
+          "end": 5,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "attack": {
+          "start": 6,
+          "end": 6,
+          "frameRate": 5,
+          "repeat": 0
+        }
+      },
+      "tightBounds": {
+        "x": 4,
+        "y": 0,
+        "width": 56,
+        "height": 64
+      },
+      "feet": {
+        "x": 32.0,
+        "y": 64
+      },
+      "sourceFiles": [
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/fish_purple_down.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/fish_purple_rest.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/fish_purple_up.png"
+      ],
+      "tileSize": 64,
+      "displayTileSize": 48,
+      "pixelArt": false,
+      "behavior": "patrol",
+      "hitbox": {
+        "width": 56,
+        "height": 64,
+        "offsetX": 4,
+        "offsetY": 0
+      },
+      "displayHeight": 39
+    },
+    {
+      "id": "fish_yellow",
+      "name": "Fish Yellow",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/enemies/fish_yellow-h64-smooth.png",
+      "thumbnail": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/enemies/fish_yellow-smooth.png",
+      "previewSheet": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/enemies/fish_yellow-preview-smooth.png",
+      "previewFrameSize": {
+        "width": 64,
+        "height": 64
+      },
+      "previewAnimations": {
+        "idle": {
+          "start": 0,
+          "end": 0
+        },
+        "run": {
+          "start": 1,
+          "end": 2
+        }
+      },
+      "frameSize": {
+        "width": 64,
+        "height": 64
+      },
+      "frameCount": 8,
+      "animations": {
+        "idle": {
+          "start": 0,
+          "end": 0,
+          "frameRate": 5,
+          "repeat": -1
+        },
+        "run": {
+          "start": 1,
+          "end": 2,
+          "frameRate": 8,
+          "repeat": -1
+        },
+        "jump": {
+          "start": 3,
+          "end": 3,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "fall": {
+          "start": 4,
+          "end": 4,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "hurt": {
+          "start": 5,
+          "end": 5,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "die": {
+          "start": 6,
+          "end": 6,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "attack": {
+          "start": 7,
+          "end": 7,
+          "frameRate": 5,
+          "repeat": 0
+        }
+      },
+      "tightBounds": {
+        "x": 0,
+        "y": 6,
+        "width": 64,
+        "height": 53
+      },
+      "feet": {
+        "x": 32.0,
+        "y": 59
+      },
+      "sourceFiles": [
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/fish_yellow_rest.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/fish_yellow_swim_a.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/fish_yellow_swim_b.png"
+      ],
+      "tileSize": 64,
+      "displayTileSize": 48,
+      "pixelArt": false,
+      "behavior": "patrol",
+      "hitbox": {
+        "width": 64,
+        "height": 53,
+        "offsetX": 0,
+        "offsetY": 6
+      },
+      "displayHeight": 39
+    },
+    {
+      "id": "fly",
+      "name": "Fly",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/enemies/fly-h64-smooth.png",
+      "thumbnail": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/enemies/fly-smooth.png",
+      "previewSheet": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/enemies/fly-preview-smooth.png",
+      "previewFrameSize": {
+        "width": 64,
+        "height": 64
+      },
+      "previewAnimations": {
+        "idle": {
+          "start": 0,
+          "end": 0
+        },
+        "run": {
+          "start": 1,
+          "end": 2
+        }
+      },
+      "frameSize": {
+        "width": 64,
+        "height": 64
+      },
+      "frameCount": 8,
+      "animations": {
+        "idle": {
+          "start": 0,
+          "end": 0,
+          "frameRate": 5,
+          "repeat": -1
+        },
+        "run": {
+          "start": 1,
+          "end": 2,
+          "frameRate": 8,
+          "repeat": -1
+        },
+        "jump": {
+          "start": 3,
+          "end": 3,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "fall": {
+          "start": 4,
+          "end": 4,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "hurt": {
+          "start": 5,
+          "end": 5,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "die": {
+          "start": 6,
+          "end": 6,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "attack": {
+          "start": 7,
+          "end": 7,
+          "frameRate": 5,
+          "repeat": 0
+        }
+      },
+      "tightBounds": {
+        "x": 7,
+        "y": 3,
+        "width": 50,
+        "height": 59
+      },
+      "feet": {
+        "x": 32.0,
+        "y": 62
+      },
+      "sourceFiles": [
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/fly_a.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/fly_b.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/fly_rest.png"
+      ],
+      "tileSize": 64,
+      "displayTileSize": 48,
+      "pixelArt": false,
+      "behavior": "flying",
+      "hitbox": {
+        "width": 50,
+        "height": 59,
+        "offsetX": 7,
+        "offsetY": 3
+      },
+      "displayHeight": 39
+    },
+    {
+      "id": "frog",
+      "name": "Frog",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/enemies/frog-h64-smooth.png",
+      "thumbnail": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/enemies/frog-smooth.png",
+      "previewSheet": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/enemies/frog-preview-smooth.png",
+      "previewFrameSize": {
+        "width": 64,
+        "height": 64
+      },
+      "previewAnimations": {
+        "idle": {
+          "start": 0,
+          "end": 0
+        },
+        "run": {
+          "start": 1,
+          "end": 2
+        }
+      },
+      "frameSize": {
+        "width": 64,
+        "height": 64
+      },
+      "frameCount": 13,
+      "animations": {
+        "idle": {
+          "start": 0,
+          "end": 1,
+          "frameRate": 5,
+          "repeat": -1
+        },
+        "run": {
+          "start": 2,
+          "end": 3,
+          "frameRate": 8,
+          "repeat": -1
+        },
+        "jump": {
+          "start": 4,
+          "end": 4,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "fall": {
+          "start": 5,
+          "end": 6,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "hurt": {
+          "start": 7,
+          "end": 8,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "die": {
+          "start": 9,
+          "end": 10,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "attack": {
+          "start": 11,
+          "end": 12,
+          "frameRate": 5,
+          "repeat": 0
+        }
+      },
+      "tightBounds": {
+        "x": 0,
+        "y": 8,
+        "width": 64,
+        "height": 56
+      },
+      "feet": {
+        "x": 32.0,
+        "y": 64
+      },
+      "sourceFiles": [
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/frog_idle.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/frog_jump.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/frog_rest.png"
+      ],
+      "tileSize": 64,
+      "displayTileSize": 48,
+      "pixelArt": false,
+      "behavior": "patrol",
+      "hitbox": {
+        "width": 64,
+        "height": 56,
+        "offsetX": 0,
+        "offsetY": 8
+      },
+      "displayHeight": 39
+    },
+    {
+      "id": "ladybug",
+      "name": "Ladybug",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/enemies/ladybug-h64-smooth.png",
+      "thumbnail": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/enemies/ladybug-smooth.png",
+      "previewSheet": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/enemies/ladybug-preview-smooth.png",
+      "previewFrameSize": {
+        "width": 64,
+        "height": 64
+      },
+      "previewAnimations": {
+        "idle": {
+          "start": 0,
+          "end": 0
+        },
+        "run": {
+          "start": 1,
+          "end": 2
+        }
+      },
+      "frameSize": {
+        "width": 64,
+        "height": 64
+      },
+      "frameCount": 9,
+      "animations": {
+        "idle": {
+          "start": 0,
+          "end": 0,
+          "frameRate": 5,
+          "repeat": -1
+        },
+        "run": {
+          "start": 1,
+          "end": 3,
+          "frameRate": 8,
+          "repeat": -1
+        },
+        "jump": {
+          "start": 4,
+          "end": 4,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "fall": {
+          "start": 5,
+          "end": 5,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "hurt": {
+          "start": 6,
+          "end": 6,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "die": {
+          "start": 7,
+          "end": 7,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "attack": {
+          "start": 8,
+          "end": 8,
+          "frameRate": 5,
+          "repeat": 0
+        }
+      },
+      "tightBounds": {
+        "x": 0,
+        "y": 14,
+        "width": 63,
+        "height": 50
+      },
+      "feet": {
+        "x": 31.5,
+        "y": 64
+      },
+      "sourceFiles": [
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/ladybug_fly.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/ladybug_rest.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/ladybug_walk_a.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/ladybug_walk_b.png"
+      ],
+      "tileSize": 64,
+      "displayTileSize": 48,
+      "pixelArt": false,
+      "behavior": "patrol",
+      "hitbox": {
+        "width": 63,
+        "height": 50,
+        "offsetX": 0,
+        "offsetY": 14
+      },
+      "displayHeight": 39
+    },
+    {
+      "id": "mouse",
+      "name": "Mouse",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/enemies/mouse-h64-smooth.png",
+      "thumbnail": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/enemies/mouse-smooth.png",
+      "previewSheet": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/enemies/mouse-preview-smooth.png",
+      "previewFrameSize": {
+        "width": 64,
+        "height": 64
+      },
+      "previewAnimations": {
+        "idle": {
+          "start": 0,
+          "end": 0
+        },
+        "run": {
+          "start": 1,
+          "end": 2
+        }
+      },
+      "frameSize": {
+        "width": 64,
+        "height": 64
+      },
+      "frameCount": 8,
+      "animations": {
+        "idle": {
+          "start": 0,
+          "end": 0,
+          "frameRate": 5,
+          "repeat": -1
+        },
+        "run": {
+          "start": 1,
+          "end": 2,
+          "frameRate": 8,
+          "repeat": -1
+        },
+        "jump": {
+          "start": 3,
+          "end": 3,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "fall": {
+          "start": 4,
+          "end": 4,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "hurt": {
+          "start": 5,
+          "end": 5,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "die": {
+          "start": 6,
+          "end": 6,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "attack": {
+          "start": 7,
+          "end": 7,
+          "frameRate": 5,
+          "repeat": 0
+        }
+      },
+      "tightBounds": {
+        "x": 0,
+        "y": 22,
+        "width": 64,
+        "height": 42
+      },
+      "feet": {
+        "x": 32.0,
+        "y": 64
+      },
+      "sourceFiles": [
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/mouse_rest.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/mouse_walk_a.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/mouse_walk_b.png"
+      ],
+      "tileSize": 64,
+      "displayTileSize": 48,
+      "pixelArt": false,
+      "behavior": "patrol",
+      "hitbox": {
+        "width": 64,
+        "height": 42,
+        "offsetX": 0,
+        "offsetY": 22
+      },
+      "displayHeight": 39
+    },
+    {
+      "id": "saw",
+      "name": "Saw",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/enemies/saw-h64-smooth.png",
+      "thumbnail": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/enemies/saw-smooth.png",
+      "previewSheet": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/enemies/saw-preview-smooth.png",
+      "previewFrameSize": {
+        "width": 64,
+        "height": 64
+      },
+      "previewAnimations": {
+        "idle": {
+          "start": 0,
+          "end": 0
+        },
+        "run": {
+          "start": 1,
+          "end": 2
+        }
+      },
+      "frameSize": {
+        "width": 64,
+        "height": 64
+      },
+      "frameCount": 8,
+      "animations": {
+        "idle": {
+          "start": 0,
+          "end": 0,
+          "frameRate": 5,
+          "repeat": -1
+        },
+        "run": {
+          "start": 1,
+          "end": 2,
+          "frameRate": 8,
+          "repeat": -1
+        },
+        "jump": {
+          "start": 3,
+          "end": 3,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "fall": {
+          "start": 4,
+          "end": 4,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "hurt": {
+          "start": 5,
+          "end": 5,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "die": {
+          "start": 6,
+          "end": 6,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "attack": {
+          "start": 7,
+          "end": 7,
+          "frameRate": 5,
+          "repeat": 0
+        }
+      },
+      "tightBounds": {
+        "x": 0,
+        "y": 0,
+        "width": 64,
+        "height": 64
+      },
+      "feet": {
+        "x": 32.0,
+        "y": 64
+      },
+      "sourceFiles": [
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/saw_a.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/saw_b.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/saw_rest.png"
+      ],
+      "tileSize": 64,
+      "displayTileSize": 48,
+      "pixelArt": false,
+      "behavior": "stationary",
+      "hitbox": {
+        "width": 64,
+        "height": 64,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "displayHeight": 39
+    },
+    {
+      "id": "slime_block",
+      "name": "Slime Block",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/enemies/slime_block-h64-smooth.png",
+      "thumbnail": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/enemies/slime_block-smooth.png",
+      "previewSheet": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/enemies/slime_block-preview-smooth.png",
+      "previewFrameSize": {
+        "width": 64,
+        "height": 64
+      },
+      "previewAnimations": {
+        "idle": {
+          "start": 0,
+          "end": 0
+        },
+        "run": {
+          "start": 1,
+          "end": 2
+        }
+      },
+      "frameSize": {
+        "width": 64,
+        "height": 64
+      },
+      "frameCount": 8,
+      "animations": {
+        "idle": {
+          "start": 0,
+          "end": 0,
+          "frameRate": 5,
+          "repeat": -1
+        },
+        "run": {
+          "start": 1,
+          "end": 2,
+          "frameRate": 8,
+          "repeat": -1
+        },
+        "jump": {
+          "start": 3,
+          "end": 3,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "fall": {
+          "start": 4,
+          "end": 4,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "hurt": {
+          "start": 5,
+          "end": 5,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "die": {
+          "start": 6,
+          "end": 6,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "attack": {
+          "start": 7,
+          "end": 7,
+          "frameRate": 5,
+          "repeat": 0
+        }
+      },
+      "tightBounds": {
+        "x": 4,
+        "y": 8,
+        "width": 56,
+        "height": 56
+      },
+      "feet": {
+        "x": 32.0,
+        "y": 64
+      },
+      "sourceFiles": [
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/slime_block_jump.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/slime_block_rest.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/slime_block_walk_a.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/slime_block_walk_b.png"
+      ],
+      "tileSize": 64,
+      "displayTileSize": 48,
+      "pixelArt": false,
+      "behavior": "patrol",
+      "hitbox": {
+        "width": 56,
+        "height": 56,
+        "offsetX": 4,
+        "offsetY": 8
+      },
+      "displayHeight": 39
+    },
+    {
+      "id": "slime_fire",
+      "name": "Slime Fire",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/enemies/slime_fire-h64-smooth.png",
+      "thumbnail": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/enemies/slime_fire-smooth.png",
+      "previewSheet": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/enemies/slime_fire-preview-smooth.png",
+      "previewFrameSize": {
+        "width": 64,
+        "height": 64
+      },
+      "previewAnimations": {
+        "idle": {
+          "start": 0,
+          "end": 0
+        },
+        "run": {
+          "start": 1,
+          "end": 2
+        }
+      },
+      "frameSize": {
+        "width": 64,
+        "height": 64
+      },
+      "frameCount": 14,
+      "animations": {
+        "idle": {
+          "start": 0,
+          "end": 1,
+          "frameRate": 5,
+          "repeat": -1
+        },
+        "run": {
+          "start": 2,
+          "end": 3,
+          "frameRate": 8,
+          "repeat": -1
+        },
+        "jump": {
+          "start": 4,
+          "end": 5,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "fall": {
+          "start": 6,
+          "end": 7,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "hurt": {
+          "start": 8,
+          "end": 9,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "die": {
+          "start": 10,
+          "end": 11,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "attack": {
+          "start": 12,
+          "end": 13,
+          "frameRate": 5,
+          "repeat": 0
+        }
+      },
+      "tightBounds": {
+        "x": 4,
+        "y": 34,
+        "width": 56,
+        "height": 30
+      },
+      "feet": {
+        "x": 32.0,
+        "y": 64
+      },
+      "sourceFiles": [
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/slime_fire_flat.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/slime_fire_rest.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/slime_fire_walk_a.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/slime_fire_walk_b.png"
+      ],
+      "tileSize": 64,
+      "displayTileSize": 48,
+      "pixelArt": false,
+      "behavior": "patrol",
+      "hitbox": {
+        "width": 56,
+        "height": 30,
+        "offsetX": 4,
+        "offsetY": 34
+      },
+      "displayHeight": 39
+    },
+    {
+      "id": "slime_normal",
+      "name": "Slime Normal",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/enemies/slime_normal-h64-smooth.png",
+      "thumbnail": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/enemies/slime_normal-smooth.png",
+      "previewSheet": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/enemies/slime_normal-preview-smooth.png",
+      "previewFrameSize": {
+        "width": 64,
+        "height": 64
+      },
+      "previewAnimations": {
+        "idle": {
+          "start": 0,
+          "end": 0
+        },
+        "run": {
+          "start": 1,
+          "end": 2
+        }
+      },
+      "frameSize": {
+        "width": 64,
+        "height": 64
+      },
+      "frameCount": 14,
+      "animations": {
+        "idle": {
+          "start": 0,
+          "end": 1,
+          "frameRate": 5,
+          "repeat": -1
+        },
+        "run": {
+          "start": 2,
+          "end": 3,
+          "frameRate": 8,
+          "repeat": -1
+        },
+        "jump": {
+          "start": 4,
+          "end": 5,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "fall": {
+          "start": 6,
+          "end": 7,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "hurt": {
+          "start": 8,
+          "end": 9,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "die": {
+          "start": 10,
+          "end": 11,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "attack": {
+          "start": 12,
+          "end": 13,
+          "frameRate": 5,
+          "repeat": 0
+        }
+      },
+      "tightBounds": {
+        "x": 3,
+        "y": 44,
+        "width": 58,
+        "height": 20
+      },
+      "feet": {
+        "x": 32.0,
+        "y": 64
+      },
+      "sourceFiles": [
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/slime_normal_flat.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/slime_normal_rest.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/slime_normal_walk_a.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/slime_normal_walk_b.png"
+      ],
+      "tileSize": 64,
+      "displayTileSize": 48,
+      "pixelArt": false,
+      "behavior": "patrol",
+      "hitbox": {
+        "width": 58,
+        "height": 20,
+        "offsetX": 3,
+        "offsetY": 44
+      },
+      "displayHeight": 39
+    },
+    {
+      "id": "slime_spike",
+      "name": "Slime Spike",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/enemies/slime_spike-h64-smooth.png",
+      "thumbnail": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/enemies/slime_spike-smooth.png",
+      "previewSheet": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/enemies/slime_spike-preview-smooth.png",
+      "previewFrameSize": {
+        "width": 64,
+        "height": 64
+      },
+      "previewAnimations": {
+        "idle": {
+          "start": 0,
+          "end": 0
+        },
+        "run": {
+          "start": 1,
+          "end": 2
+        }
+      },
+      "frameSize": {
+        "width": 64,
+        "height": 64
+      },
+      "frameCount": 14,
+      "animations": {
+        "idle": {
+          "start": 0,
+          "end": 1,
+          "frameRate": 5,
+          "repeat": -1
+        },
+        "run": {
+          "start": 2,
+          "end": 3,
+          "frameRate": 8,
+          "repeat": -1
+        },
+        "jump": {
+          "start": 4,
+          "end": 5,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "fall": {
+          "start": 6,
+          "end": 7,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "hurt": {
+          "start": 8,
+          "end": 9,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "die": {
+          "start": 10,
+          "end": 11,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "attack": {
+          "start": 12,
+          "end": 13,
+          "frameRate": 5,
+          "repeat": 0
+        }
+      },
+      "tightBounds": {
+        "x": 4,
+        "y": 28,
+        "width": 56,
+        "height": 36
+      },
+      "feet": {
+        "x": 32.0,
+        "y": 64
+      },
+      "sourceFiles": [
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/slime_spike_flat.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/slime_spike_rest.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/slime_spike_walk_a.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/slime_spike_walk_b.png"
+      ],
+      "tileSize": 64,
+      "displayTileSize": 48,
+      "pixelArt": false,
+      "behavior": "stationary",
+      "hitbox": {
+        "width": 56,
+        "height": 36,
+        "offsetX": 4,
+        "offsetY": 28
+      },
+      "displayHeight": 39
+    },
+    {
+      "id": "snail",
+      "name": "Snail",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/enemies/snail-h64-smooth.png",
+      "thumbnail": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/enemies/snail-smooth.png",
+      "previewSheet": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/enemies/snail-preview-smooth.png",
+      "previewFrameSize": {
+        "width": 64,
+        "height": 64
+      },
+      "previewAnimations": {
+        "idle": {
+          "start": 0,
+          "end": 0
+        },
+        "run": {
+          "start": 1,
+          "end": 2
+        }
+      },
+      "frameSize": {
+        "width": 64,
+        "height": 64
+      },
+      "frameCount": 8,
+      "animations": {
+        "idle": {
+          "start": 0,
+          "end": 0,
+          "frameRate": 5,
+          "repeat": -1
+        },
+        "run": {
+          "start": 1,
+          "end": 2,
+          "frameRate": 8,
+          "repeat": -1
+        },
+        "jump": {
+          "start": 3,
+          "end": 3,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "fall": {
+          "start": 4,
+          "end": 4,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "hurt": {
+          "start": 5,
+          "end": 5,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "die": {
+          "start": 6,
+          "end": 6,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "attack": {
+          "start": 7,
+          "end": 7,
+          "frameRate": 5,
+          "repeat": 0
+        }
+      },
+      "tightBounds": {
+        "x": 0,
+        "y": 13,
+        "width": 64,
+        "height": 51
+      },
+      "feet": {
+        "x": 32.0,
+        "y": 64
+      },
+      "sourceFiles": [
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/snail_rest.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/snail_shell.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/snail_walk_a.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/snail_walk_b.png"
+      ],
+      "tileSize": 64,
+      "displayTileSize": 48,
+      "pixelArt": false,
+      "behavior": "patrol",
+      "hitbox": {
+        "width": 64,
+        "height": 51,
+        "offsetX": 0,
+        "offsetY": 13
+      },
+      "displayHeight": 39
+    },
+    {
+      "id": "worm_normal",
+      "name": "Worm Normal",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/enemies/worm_normal-h64-smooth.png",
+      "thumbnail": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/enemies/worm_normal-smooth.png",
+      "previewSheet": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/enemies/worm_normal-preview-smooth.png",
+      "previewFrameSize": {
+        "width": 64,
+        "height": 64
+      },
+      "previewAnimations": {
+        "idle": {
+          "start": 0,
+          "end": 0
+        },
+        "run": {
+          "start": 1,
+          "end": 2
+        }
+      },
+      "frameSize": {
+        "width": 64,
+        "height": 64
+      },
+      "frameCount": 8,
+      "animations": {
+        "idle": {
+          "start": 0,
+          "end": 0,
+          "frameRate": 5,
+          "repeat": -1
+        },
+        "run": {
+          "start": 1,
+          "end": 2,
+          "frameRate": 8,
+          "repeat": -1
+        },
+        "jump": {
+          "start": 3,
+          "end": 3,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "fall": {
+          "start": 4,
+          "end": 4,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "hurt": {
+          "start": 5,
+          "end": 5,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "die": {
+          "start": 6,
+          "end": 6,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "attack": {
+          "start": 7,
+          "end": 7,
+          "frameRate": 5,
+          "repeat": 0
+        }
+      },
+      "tightBounds": {
+        "x": 0,
+        "y": 40,
+        "width": 64,
+        "height": 24
+      },
+      "feet": {
+        "x": 32.0,
+        "y": 64
+      },
+      "sourceFiles": [
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/worm_normal_move_a.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/worm_normal_move_b.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/worm_normal_rest.png"
+      ],
+      "tileSize": 64,
+      "displayTileSize": 48,
+      "pixelArt": false,
+      "behavior": "patrol",
+      "hitbox": {
+        "width": 64,
+        "height": 24,
+        "offsetX": 0,
+        "offsetY": 40
+      },
+      "displayHeight": 39
+    },
+    {
+      "id": "worm_ring",
+      "name": "Worm Ring",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/enemies/worm_ring-h64-smooth.png",
+      "thumbnail": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/enemies/worm_ring-smooth.png",
+      "previewSheet": "/assets/packs/kenney-new-platformer-pack-1.1/.generated/thumbs/enemies/worm_ring-preview-smooth.png",
+      "previewFrameSize": {
+        "width": 64,
+        "height": 64
+      },
+      "previewAnimations": {
+        "idle": {
+          "start": 0,
+          "end": 0
+        },
+        "run": {
+          "start": 1,
+          "end": 2
+        }
+      },
+      "frameSize": {
+        "width": 64,
+        "height": 64
+      },
+      "frameCount": 8,
+      "animations": {
+        "idle": {
+          "start": 0,
+          "end": 0,
+          "frameRate": 5,
+          "repeat": -1
+        },
+        "run": {
+          "start": 1,
+          "end": 2,
+          "frameRate": 8,
+          "repeat": -1
+        },
+        "jump": {
+          "start": 3,
+          "end": 3,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "fall": {
+          "start": 4,
+          "end": 4,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "hurt": {
+          "start": 5,
+          "end": 5,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "die": {
+          "start": 6,
+          "end": 6,
+          "frameRate": 5,
+          "repeat": 0
+        },
+        "attack": {
+          "start": 7,
+          "end": 7,
+          "frameRate": 5,
+          "repeat": 0
+        }
+      },
+      "tightBounds": {
+        "x": 0,
+        "y": 36,
+        "width": 64,
+        "height": 28
+      },
+      "feet": {
+        "x": 32.0,
+        "y": 64
+      },
+      "sourceFiles": [
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/worm_ring_move_a.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/worm_ring_move_b.png",
+        "/assets/packs/kenney-new-platformer-pack-1.1/Sprites/Enemies/Default/worm_ring_rest.png"
+      ],
+      "tileSize": 64,
+      "displayTileSize": 48,
+      "pixelArt": false,
+      "behavior": "patrol",
+      "hitbox": {
+        "width": 64,
+        "height": 28,
+        "offsetX": 0,
+        "offsetY": 36
+      },
+      "displayHeight": 39
+    }
+  ],
+  "enemySets": [
+    {
+      "id": "kenney-new-platformer-pack-1-1",
+      "name": "kenney-new-platformer-pack-1.1",
+      "enemyIds": [
+        "barnacle",
+        "bee",
+        "block",
+        "fish_blue",
+        "fish_purple",
+        "fish_yellow",
+        "fly",
+        "frog",
+        "ladybug",
+        "mouse",
+        "saw",
+        "slime_block",
+        "slime_fire",
+        "slime_normal",
+        "slime_spike",
+        "snail",
+        "worm_normal",
+        "worm_ring"
+      ]
+    }
+  ],
+  "sounds": {
+    "jump": {
+      "key": "audio-jump",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/Sounds/sfx_jump.ogg",
+      "type": "audio",
+      "loop": false
+    },
+    "hurt": {
+      "key": "audio-hurt",
+      "path": "/assets/packs/kenney-new-platformer-pack-1.1/Sounds/sfx_hurt.ogg",
+      "type": "audio",
+      "loop": false
+    }
+  },
+  "unassignedSounds": [
+    "/assets/packs/kenney-new-platformer-pack-1.1/Sounds/sfx_bump.ogg",
+    "/assets/packs/kenney-new-platformer-pack-1.1/Sounds/sfx_coin.ogg",
+    "/assets/packs/kenney-new-platformer-pack-1.1/Sounds/sfx_disappear.ogg",
+    "/assets/packs/kenney-new-platformer-pack-1.1/Sounds/sfx_gem.ogg",
+    "/assets/packs/kenney-new-platformer-pack-1.1/Sounds/sfx_jump-high.ogg",
+    "/assets/packs/kenney-new-platformer-pack-1.1/Sounds/sfx_magic.ogg",
+    "/assets/packs/kenney-new-platformer-pack-1.1/Sounds/sfx_select.ogg",
+    "/assets/packs/kenney-new-platformer-pack-1.1/Sounds/sfx_throw.ogg"
+  ],
+  "packs": [
+    {
+      "id": "kenney-new-platformer-pack-1-1",
+      "name": "kenney-new-platformer-pack-1.1",
+      "heroes": [
+        "beige",
+        "green",
+        "pink",
+        "purple",
+        "yellow"
+      ],
+      "enemies": [
+        "barnacle",
+        "bee",
+        "block",
+        "fish_blue",
+        "fish_purple",
+        "fish_yellow",
+        "fly",
+        "frog",
+        "ladybug",
+        "mouse",
+        "saw",
+        "slime_block",
+        "slime_fire",
+        "slime_normal",
+        "slime_spike",
+        "snail",
+        "worm_normal",
+        "worm_ring"
+      ],
+      "backgrounds": [
+        "background_clouds",
+        "background_color_desert",
+        "background_color_hills",
+        "background_color_mushrooms",
+        "background_color_trees",
+        "background_fade_desert",
+        "background_fade_hills",
+        "background_fade_mushrooms",
+        "background_fade_trees",
+        "background_solid_cloud",
+        "background_solid_dirt",
+        "background_solid_grass",
+        "background_solid_sand",
+        "background_solid_sky"
+      ],
+      "tilesets": [
+        "grass",
+        "dirt",
+        "sand",
+        "snow",
+        "stone",
+        "purple"
+      ],
+      "sounds": {
+        "jump": {
+          "key": "audio-jump",
+          "path": "/assets/packs/kenney-new-platformer-pack-1.1/Sounds/sfx_jump.ogg",
+          "type": "audio",
+          "loop": false
+        },
+        "hurt": {
+          "key": "audio-hurt",
+          "path": "/assets/packs/kenney-new-platformer-pack-1.1/Sounds/sfx_hurt.ogg",
+          "type": "audio",
+          "loop": false
+        }
+      },
+      "tileSize": 64,
+      "displayTileSize": 48,
+      "pixelArt": false
+    }
+  ],
+  "unused": []
+}

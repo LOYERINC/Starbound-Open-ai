@@ -1,0 +1,102 @@
+:root {
+  color-scheme: light;
+  --bg: #FFF4D6;
+  --ink: #000000;
+  --yellow: #FFD60A;
+  --pink: #FF5C8A;
+  --blue: #3A86FF;
+  --green: #2EC66B;
+  --red: #FF3B30;
+  --white: #FFFFFF;
+  --line: 4px solid var(--ink);
+  --shadow: 6px 6px 0 var(--ink);
+  --shadow-hover: 9px 9px 0 var(--ink);
+  --font: "Arial Rounded MT Bold", "Trebuchet MS", system-ui, sans-serif;
+  font-family: var(--font);
+  color: var(--ink);
+  background: var(--bg);
+}
+
+.nb-button,
+.nb-input,
+.nb-card,
+.nb-badge,
+.nb-panel {
+  border: var(--line);
+  border-radius: 0;
+  box-shadow: var(--shadow);
+}
+
+.nb-button {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 16px;
+  color: var(--ink);
+  background: var(--yellow);
+  font: 900 16px/1.2 var(--font);
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 120ms ease, box-shadow 120ms ease, filter 120ms ease;
+}
+
+.nb-button:not(:disabled):hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.nb-button:not(:disabled):active {
+  transform: translate(4px, 4px);
+  box-shadow: 0 0 0 var(--ink);
+}
+
+.nb-button:disabled,
+.nb-button[aria-disabled="true"] {
+  color: #333;
+  background: #D8D2C2;
+  cursor: not-allowed;
+  box-shadow: 3px 3px 0 var(--ink);
+}
+
+.nb-card,
+.nb-panel {
+  color: var(--ink);
+  background: var(--white);
+}
+
+.nb-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 4px 9px;
+  color: var(--ink);
+  background: var(--pink);
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.nb-input {
+  min-height: 46px;
+  padding: 9px 11px;
+  color: var(--ink);
+  background: var(--white);
+  font: inherit;
+}
+
+:where(button, input, select, textarea, a, [tabindex]):focus-visible {
+  outline: 4px solid var(--blue);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

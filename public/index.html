@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#FFF4D6">
+  <title>Starbound Run</title>
+  <link rel="stylesheet" href="/styles/theme.css">
+  <link rel="stylesheet" href="/game/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.90.0/phaser.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js" defer></script>
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <div id="site-ui">
+    <main class="page home-page" data-page="home">
+      <section class="home-hero">
+        <img id="game-logo" class="game-logo" alt="" hidden>
+        <div class="eyebrow">A classroom race through the stars</div>
+        <h1>Starbound Run</h1>
+        <p class="hero-copy">Race through the stage, answer questions, and reach the finish flag.</p>
+      </section>
+      <div class="home-layout">
+        <section class="info-card nb-card how-card">
+          <h2>How it works</h2>
+          <ul class="how-list">
+            <li>Run and jump through the stage.</li>
+            <li>Question gates block your path: answer correctly to open them.</li>
+            <li>Faster answers mean a faster finish, because the race clock never stops.</li>
+            <li>Falling or getting hurt costs a heart; at 0 hearts you answer a revive question.</li>
+            <li>First to the finish flag wins. Host a room for a classroom race.</li>
+          </ul>
+        </section>
+        <section class="info-card nb-card menu-card" aria-label="Game menu">
+          <button id="menu-mute" type="button" class="mute-toggle menu-mute" aria-label="Toggle sound">Sound on</button>
+          <button class="menu-button primary-button" id="go-to-questions" type="button"><span>1. Add your questions</span><span class="button-arrow" aria-hidden="true">→</span></button>
+          <button class="menu-button secondary-button" id="play-solo" type="button" disabled aria-disabled="true"><span>2. Play solo practice</span><span class="button-hint" id="play-hint">Add questions first</span></button>
+          <button class="menu-button primary-button" id="host-room" type="button"><span>Host a room</span><span class="button-arrow" aria-hidden="true">→</span></button>
+          <button class="menu-button secondary-button" id="join-room" type="button"><span>Join a room</span><span class="button-arrow" aria-hidden="true">→</span></button>
+          <button class="menu-button secondary-button" id="rejoin-room" type="button" hidden><span>Rejoin your room</span><span class="button-arrow" aria-hidden="true">→</span></button>
+        </section>
+      </div>
+    </main>
+
+    <main class="page selection-page" data-page="join" hidden>
+      <header class="page-heading"><button class="back-link" id="join-back" type="button">← Home</button><div class="eyebrow">Classroom race</div><h1>Join a room</h1><p>Enter the code from your teacher.</p></header>
+      <section class="info-card nb-card online-form">
+        <label class="edit-field"><span>Room code</span><input id="room-code" maxlength="5" autocomplete="one-time-code" autocapitalize="characters" inputmode="latin" placeholder="ABCDE" required></label>
+        <label class="edit-field"><span>Your display name</span><input id="student-name" maxlength="16" autocomplete="nickname" placeholder="Name (up to 16 characters)" required></label>
+        <p id="join-error" class="status-message" role="alert"></p>
+        <button class="menu-button primary-button" id="join-submit" type="button">Choose your hero →</button>
+      </section>
+    </main>
+
+    <main class="page selection-page" data-page="lobby" hidden>
+      <header class="page-heading"><div class="eyebrow" id="lobby-eyebrow">Classroom race</div><h1 id="lobby-title">Room lobby</h1><p id="lobby-copy">Waiting for teacher to start…</p></header>
+      <section class="info-card nb-card lobby-card"><p id="room-code-display" class="room-code-display"></p><h2>Students</h2><div id="lobby-students" class="student-list"></div><button class="menu-button primary-button" id="lobby-start" type="button" hidden>Start game</button><button class="menu-button danger-button" id="lobby-end" type="button" hidden>End game</button><button class="menu-button danger-button" id="lobby-close" type="button" hidden>Close room</button><p id="lobby-error" class="status-message" role="status"></p></section>
+    </main>
+
+    <main class="page selection-page" data-page="hero" hidden>
+      <header class="page-heading">
+        <button class="back-link" id="hero-back-home" type="button">← Home</button>
+        <div class="eyebrow">Your runner</div>
+        <h1>Choose your hero</h1>
+        <p>Pick a character. Hover or tap a card to preview its movement.</p>
+      </header>
+      <section class="picker-tools">
+        <label for="avatar-color">Color tint <input id="avatar-color" type="color" value="#ffffff"></label>
+        <label for="avatar-accessory">Accessory
+          <select id="avatar-accessory"><option value="none">None</option><option value="cap">Adventure cap</option><option value="crown">Crown</option><option value="starband">Star band</option></select>
+        </label>
+        <button class="small-button" id="hero-random" type="button">Random</button>
+      </section>
+      <section id="hero-grid" class="asset-card-grid" aria-label="Available heroes"></section>
+      <div class="picker-footer"><span id="hero-selection-label" aria-live="polite"></span><button class="menu-button primary-button" id="hero-continue" type="button">Continue to world →</button></div>
+    </main>
+
+    <main class="page selection-page" data-page="world" hidden>
+      <header class="page-heading">
+        <button class="back-link" id="world-back-hero" type="button">← Heroes</button>
+        <div class="eyebrow">Build your stage</div>
+        <h1>Choose your world</h1>
+        <p>Choose the scenery and ground tiles independently.</p>
+      </header>
+      <section class="world-preview-card info-card nb-card">
+        <h2>Live combination preview</h2>
+        <canvas id="world-preview" width="640" height="220" aria-label="Selected background and tileset preview"></canvas>
+        <p id="world-selection-label" aria-live="polite"></p>
+      </section>
+      <section class="world-picker-section">
+        <div class="picker-section-heading"><h2>Background</h2><button class="small-button" id="background-random" type="button">Random background</button></div>
+        <div id="background-grid" class="asset-card-grid compact-grid" aria-label="Available backgrounds"></div>
+      </section>
+      <section class="world-picker-section">
+        <div class="picker-section-heading"><h2>Tileset</h2><button class="small-button" id="tileset-random" type="button">Random tileset</button></div>
+        <div id="tileset-grid" class="asset-card-grid compact-grid" aria-label="Available tilesets"></div>
+      </section>
+      <p id="world-status" class="status-message" role="status"></p><div class="picker-footer"><span></span><button class="menu-button primary-button" id="world-play" type="button">Play solo practice →</button></div>
+    </main>
+
+    <main class="page questions-page" data-page="questions" hidden>
+      <header class="page-heading">
+        <button class="back-link" id="back-home" type="button">← Home</button>
+        <div class="eyebrow">Build your question library</div>
+        <h1>Add your questions</h1>
+        <p>Questions stay in this browser on your device.</p>
+      </header>
+
+      <section class="info-card nb-card step-card">
+        <div class="step-heading"><span class="step-number">A</span><div><h2>Generate questions with your own AI</h2><p>Use a file-capable AI to turn your document into a quiz.</p></div></div>
+        <label class="count-control" for="question-count">Number of questions <input id="question-count" type="number" min="5" max="50" value="20" inputmode="numeric"></label>
+        <div class="instructions-note">
+          Attach your PDF in ChatGPT, Claude, Gemini or any AI that accepts files, paste this prompt, then paste the result below. Very long PDFs should be split by chapter. <strong>The PDF never touches our server.</strong>
+        </div>
+        <pre class="prompt-output" id="prompt-output" tabindex="0" aria-label="Question generation prompt"></pre>
+        <button class="small-button accent-button" id="copy-prompt" type="button">Copy prompt</button>
+        <p class="status-message" id="prompt-status" role="status" aria-live="polite"></p>
+      </section>
+
+      <section class="info-card nb-card step-card">
+        <div class="step-heading"><span class="step-number">B</span><div><h2>Add questions</h2><p>Paste the AI result, or load a JSON or CSV file. You can import valid rows even when other rows have errors.</p></div></div>
+        <label class="field-label" for="question-input">Paste JSON or CSV</label>
+        <textarea id="question-input" rows="10" spellcheck="false" placeholder='Paste a JSON array or CSV with header: question,A,B,C,D,answer'></textarea>
+        <div class="import-actions">
+          <label class="file-button" for="question-file">Choose .json or .csv file</label>
+          <input id="question-file" type="file" accept=".json,.csv,application/json,text/csv" hidden>
+          <button class="small-button" id="load-samples" type="button">Load sample questions</button>
+          <button class="small-button accent-button" id="import-questions" type="button">Import</button>
+        </div>
+        <p class="status-message" id="import-status" role="status" aria-live="polite"></p>
+        <div class="import-errors" id="import-errors" role="alert" aria-live="polite"></div>
+      </section>
+
+      <section class="info-card nb-card step-card preview-card">
+        <div class="step-heading"><span class="step-number">C</span><div><h2>Your questions</h2><p id="loaded-count">0 / 200 questions loaded</p></div></div>
+        <button class="small-button danger-button clear-button" id="clear-questions" type="button">Clear all</button>
+        <div id="question-list" class="question-list"></div>
+      </section>
+    </main>
+  </div>
+  <main id="game-root" aria-label="Starbound Run platform game" hidden></main>
+</body>
+</html>
