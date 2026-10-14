@@ -1,6 +1,6 @@
 # Starbound Run
 
-Starbound Run is a classroom game. Run and jump through a stage, answer questions, and race to the finish. Play alone or make a room for your class. The game runs in a web browser.
+Starbound Run is a classroom game. Run and jump through a stage, answer questions, and race to the finish. Play alone or make a room for your class. The game runs in a web browser usin https://starbound-open-ai-production.up.railway.app/ 
 
 ## Run on your computer
 
