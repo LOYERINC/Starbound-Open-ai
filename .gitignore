@@ -8,5 +8,5 @@ venv/
 !.env.example
 *.log
 artifacts/
-docs/ui-screenshots/
-public/assets/packs/**/.generated/
+app/docs/ui-screenshots/
+app/public/assets/packs/**/.generated/
