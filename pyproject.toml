@@ -1,2 +1,14 @@
+[project]
+name = "starbound-run"
+version = "0.1.0"
+requires-python = "==3.13.*"
+dependencies = [
+    "fastapi[standard]>=0.115,<1.0",
+    "uvicorn[standard]>=0.30,<1.0",
+    "Pillow>=10.0,<12.0",
+    "CairoSVG>=2.7,<3.0",
+    "pytest>=8.0,<9.0",
+]
+
 [tool.fastapi]
 entrypoint = "server.main:app"
